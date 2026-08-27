@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">CountApp</string>
     <string name="number">0</string>
+    <string name="Nama">Adelardo Tsabat</string>
+    <string name="NIM">24/535296/SV/24191</string>
     <string name="btn_toast">Toast</string>
     <string name="btn_count">Count</string>
+    <color name="yellow">#FFF043</color>
 </resources>
