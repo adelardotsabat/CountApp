@@ -1,17 +1,17 @@
 package com.example.countapp
 
-import android.os.Binder
 import android.os.Bundle
 import android.view.inputmethod.InputBinding
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.countapp.databinding.ActivityMainBinding
 
-// bikim variabel untuk binding
+// bikin variabel untuk binding
 private lateinit var binding: ActivityMainBinding
-private var number = 0
+var counter = 0
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +25,21 @@ class MainActivity : AppCompatActivity() {
 
         // sekarang
         with(receiver = binding) {
+            tvNumber.text = counter.toString()
+
+            btnCount.setOnClickListener {
+                counter++
+                tvNumber.text = counter.toString()
+            }
+            btnToast.setOnClickListener {
+                Toast
+                    .makeText(
+                        this@MainActivity,
+                        "Counter: $counter",
+                        Toast.LENGTH_SHORT
+                    )
+                    .show()
+            }
 
 
         }
